@@ -1,9 +1,14 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:lightboat/history/HistoryDropDown.dart';
+import 'package:lightboat/landscape/Landscape.dart';
 import 'package:lightboat/widget/search/SearchBar.dart';
 import 'package:provider/provider.dart';
 import '../main.dart';
 import 'Wallpaper.dart';
+import 'dart:io';
+import 'package:flutter/services.dart';
 
 import '../widget/search/HomeSearchBar.dart';
 
@@ -30,6 +35,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  Landscape? landscape;
   SearchBarBehaviour? searchBarBehaviour;
 
   _HomeScreenState() {
